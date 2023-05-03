@@ -1,4 +1,9 @@
 import React, { useState } from 'react'
+import ReactPlayer from 'react-player'
+// import MultiCarousel from './multicarousel';
+// import Carousel from 'react-multi-carousel';
+// import 'react-multi-carousel/lib/styles.css';
+// import Profiles from './profiles.json'
 
 function Services() {
     const [cards]=useState([
@@ -97,8 +102,8 @@ function Services() {
                    <li>Air Conditioner Service	from $150</li> 
                 
              </div>
-             <div className='TextBox2'>
-                
+             <div className='YouTube'>
+                <ReactPlayer controls url='https://youtu.be/psSNJgGl2lc'></ReactPlayer>
                
 
              </div>
@@ -125,9 +130,43 @@ function Services() {
             </div>
         
         </section>
+           <section>
+          <h3>Our Trusted professionals</h3>
+             
+          
+        </section>
         
         </div>
   )
+  // function caroselCards(){
+  //   return (
+  //      <div className='carousel'>
+  //            {
+  //             Profiles.map(profile =>{
+  //               return (
+  //                 <div className='cards'>
+  //                    {profile.name} 
+  //                    {profile.description} 
+  //                    {profile.category} 
+
+
+  //                 </div>
+  //               )
+
+
+
+
+
+
+  //             })
+                
+  //            }
+    //    </div>
+    // );
+    
+    
+  // }
+ 
 }
 
 export default Services
