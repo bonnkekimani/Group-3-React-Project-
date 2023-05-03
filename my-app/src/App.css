@@ -4,6 +4,51 @@
   color: white;
 }
 
+.work{
+  padding: 30px;
+  background-color: rgb(68, 70, 66);
+  color: white;
+}
+
+.reviews{
+  padding: 30px;
+  background-color: rgb(68, 70, 66);
+  color: white;
+}
+
+.testimonies{
+  text-align: center;
+}
+
+.review-details{
+  padding-left: 80px;
+  padding-right: 80px;
+  white-space:normal;
+  text-align: justify;
+}
+
+.first-rev{
+  text-align: center;
+}
+
+.review-card{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+  width: 100%;
+  margin: 50px 0;
+}
+
+.review-card > div {
+  display: row;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #020101;
+  color: orangered;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
 .tab{
   background-color: rgb(68, 70, 66);
   color: rgb(255, 153, 0);
@@ -52,6 +97,10 @@
 }
 
 .l-par{
+  text-align: center;
+}
+
+.last-rev{
   text-align: center;
 }
 

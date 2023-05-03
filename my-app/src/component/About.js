@@ -5,10 +5,10 @@ function About() {
         <div className='about'>
             <div class='tab'>
                 <header>
-                    <div class='title'>
+                    <div class='atitle'>
                         <h1>ABOUT US</h1>
                     </div>
-                    <div class='subtitle'>
+                    <div class='asubtitle'>
                         <h2>The Safe, Guaranteed Solution to Your Home Repair and Maintenance Needs</h2>
                     </div>
                 </header>
