@@ -20,8 +20,8 @@ function About() {
                 <div class='side-to-side'>
                     <div>
                     <p>Mr. Handyman is your one-call solution for a wide range of home maintenance and repair 
-                        needs. Our uniformed technicians are fully insured professionals. We arrive on time in u
-                        niform and a marked van with the tools to complete the job right.
+                        needs. Our uniformed technicians are fully insured professionals. We arrive on time in 
+                        uniform and a marked van with the tools to complete the job right.
                         </p>
                         <p>
                         Mr. Handyman technicians 
@@ -33,7 +33,7 @@ function About() {
                         Mr. Handyman, a Neighborly company, was founded in 1996, became a part of the Service 
                         Brands International (SBI) home services offerings, and in 2015 was acquired by Neighborly, 
                         the largest home franchisor in the world. In that time, Mr. Handyman has served nearly 1 
-                        million customers across North America.
+                        million customers across Kenya.
                         </p>
                     </div>
                 </div>
@@ -43,22 +43,22 @@ function About() {
             </p>
             <ul>
                 <li>
-                One simple call provides easy scheduling
+                - One simple call provides easy scheduling
                 </li><br></br>
                 <li>
-                On time arrival
+                - On time arrival
                 </li><br></br>
                 <li>
-                Job is done right the first time
+                - Job is done right the first time
                 </li><br></br>
                 <li>
-                Wide variety of repair, maintenance and improvements services
+                - Wide variety of repair, maintenance and improvements services
                 </li><br></br>
                 <li>
-                Technicians have an average of 10 years’ experience in the trades and are fully insured for your safety
+                - Technicians have an average of 10 years’ experience in the trades and are fully insured for your safety
                 </li><br></br>
                 <li>
-                We promise to clean up when we’re done
+                - We promise to clean up when we’re done
                 </li>
             </ul>
         </div>

@@ -5,8 +5,8 @@
 }
 
 .tab{
-  background-color: rgb(58, 44, 38);
-  color: white;
+  background-color: rgb(68, 70, 66);
+  color: rgb(255, 153, 0);
 }
 
 .title{
@@ -125,4 +125,32 @@ textarea{
   width: 900px;
   background-color: rgb(182, 182, 182);
 
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
 }

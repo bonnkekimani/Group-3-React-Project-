@@ -20,33 +20,32 @@ function Contact() {
         message: ""
     });
     
-      const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prevFormData) => ({
-          ...prevFormData,
-          [name]: value
-        }));
-      };
+    const handleChange = (event) => {
+        setnewFormData({
+          ...newformData,
+          [event.target.name]: event.target.value
+        });
+      }
     
       function handleSubmit (e) {
         e.preventDefault();
         setFormData([...formData, newformData]);
         setnewFormData({
             fname: '',
-        lname: "",
-        email: "",
-        phone: "",
-        address: "",
-        city: "",
-        zip_code: "",
-        state: "",
-        to_call: "",
-        Help_you: "",
-        Location: "",
-        start_project: "",
-        referral: "",
-        Comments: "",
-        message: ""
+            lname: "",
+            email: "",
+            phone: "",
+            address: "",
+            city: "",
+            zip_code: "",
+            state: "",
+            to_call: "",
+            help_you: "",
+            location: "",
+            start_project: "",
+            referral: "",
+            comments: "",
+            message: ""
         });
       };
 
@@ -87,7 +86,7 @@ function Contact() {
                             <input
                                 type="text"
                                 name="fname"
-                                value={formData.Fname}
+                                value={newformData.fname}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -96,7 +95,7 @@ function Contact() {
                             <input
                                 type="text"
                                 name="lname"
-                                value={formData.Lname}
+                                value={newformData.lname}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -107,7 +106,7 @@ function Contact() {
                             <input
                             type="text"
                             name="email"
-                            value={formData.email}
+                            value={newformData.email}
                             onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -116,7 +115,7 @@ function Contact() {
                             <input
                                 type="tel"
                                 name="phone"
-                                value={formData.phone}
+                                value={newformData.phone}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -125,7 +124,7 @@ function Contact() {
                             <input
                                 type="text"
                                 name="address"
-                                value={formData.address}
+                                value={newformData.address}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -134,7 +133,7 @@ function Contact() {
                             <input
                                 type="text"
                                 name="city"
-                                value={formData.city}
+                                value={newformData.city}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -143,7 +142,7 @@ function Contact() {
                             <input
                                 type="text"
                                 name="zip_code"
-                                value={formData.zip_code}
+                                value={newformData.zip_code}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -152,7 +151,7 @@ function Contact() {
                             <input
                                 type="text"
                                 name="state"
-                                value={formData.state}
+                                value={newformData.state}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -161,7 +160,7 @@ function Contact() {
                             <input
                                 type="text"
                                 name="to_call"
-                                value={formData.to_call}
+                                value={newformData.to_call}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -171,29 +170,27 @@ function Contact() {
                             <input 
                                 type="checkbox" 
                                 name="help" 
-                                value="Home Remodeling" 
+                                value={newformData.help_you}
                                 onChange={handleChange} />
                                 Home Remodeling <br></br>
                             <input 
                                 type="checkbox" 
                                 name="help" 
-                                value="Home Remodeling" 
+                                value={newformData.help_you} 
                                 onChange={handleChange} />
                                 Handyman Work <br></br>
                         </label><br></br>
                         <label>Location</label>  <br></br>
                         <select id="Locations" onChange={handleChange}>
                             <option value="" >Please select </option>
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
-                            <option value="option4">Option 4</option>
-                            <option value="option5">Option 5</option>
-                            <option value="option6">Option 6</option>
-                            <option value="option7">Option 7</option>
-                            <option value="option8">Option 8</option>
-                            <option value="option9">Option 9</option>
-                            <option value="option10">Option 10</option>
+                            <option value={newformData.location}>Nairobi, KEN</option>
+                            <option value={newformData.location}>Mombasa, KEN</option>
+                            <option value={newformData.location}>Nakuru, KEN</option>
+                            <option value={newformData.location}>Kisumu, KEN</option>
+                            <option value={newformData.location}>Nyeri, KEN</option>
+                            <option value={newformData.location}>Garissa, KEN</option>
+                            <option value={newformData.location}>Machakos, KEN</option>
+                            <option value={newformData.location}></option>
                         </select><br></br>
                         <br></br>
                         <label>How Soon Would You Like to Start Your Project</label>  <br></br>
