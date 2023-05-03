@@ -6,10 +6,13 @@ import Work from './component/Work';
 import Reviews from './component/Reviews';
 import Contacts from './component/Contacts';
 import NavBar from "./component/NavBar";
+import SignUpform from './component/SignUp';
+import Footer from './component/Footer';
 
 function App() {
   return (
     <div className="App">
+      <SignUpform/>
      <BrowserRouter>
       <NavBar/>
       <Routes>
@@ -19,6 +22,8 @@ function App() {
         <Route path="/contacts" element={<Contacts/>}></Route>
       </Routes>
       </BrowserRouter>
+      
+      <Footer/>
     </div>
   );
 }
