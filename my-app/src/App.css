@@ -47,15 +47,23 @@
 }
 
 .contact-header{
-  background-color: orangered;
-  color:black;
+  color: white;
   padding: 1px;
+}
+
+.l-par{
+  text-align: center;
 }
 
 .greetings{
   text-align: center;
   font-weight:bold;
-  color: orangered
+  font-size: 27px;
+  width: 100%; 
+  color: white;
+  background-color: orangered;
+  padding-top: 14px;
+  padding-bottom: 14px; 
 }
 
 .form-container {
@@ -91,6 +99,21 @@ input[type=tel] {
   border-radius: 4px;
   box-sizing: border-box;
   background-color: rgb(182, 182, 182);
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #0f0f0c;
+  color: rgb(250, 247, 247);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
 }
 
 .name{

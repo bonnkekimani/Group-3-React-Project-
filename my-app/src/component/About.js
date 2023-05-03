@@ -44,19 +44,19 @@ function About() {
             <ul>
                 <li>
                 One simple call provides easy scheduling
-                </li>
+                </li><br></br>
                 <li>
                 On time arrival
-                </li>
+                </li><br></br>
                 <li>
                 Job is done right the first time
-                </li>
+                </li><br></br>
                 <li>
                 Wide variety of repair, maintenance and improvements services
-                </li>
+                </li><br></br>
                 <li>
                 Technicians have an average of 10 years’ experience in the trades and are fully insured for your safety
-                </li>
+                </li><br></br>
                 <li>
                 We promise to clean up when we’re done
                 </li>

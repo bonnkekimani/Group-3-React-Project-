@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
 function Contact() {
-    const [formData, setFormData] = useState({
-        fname: "",
+    const [formData, setFormData] = useState([]);
+    const [newformData, setnewFormData] = useState({
+        fname: '',
         lname: "",
         email: "",
         phone: "",
@@ -17,7 +18,7 @@ function Contact() {
         referral: "",
         Comments: "",
         message: ""
-      });
+    });
     
       const handleChange = (e) => {
         const { name, value } = e.target;
@@ -27,10 +28,26 @@ function Contact() {
         }));
       };
     
-      const handleSubmit = (e) => {
+      function handleSubmit (e) {
         e.preventDefault();
-        // Here you can add the logic to send the form data to a server or an email address
-        console.log(formData);
+        setFormData([...formData, newformData]);
+        setnewFormData({
+            fname: '',
+        lname: "",
+        email: "",
+        phone: "",
+        address: "",
+        city: "",
+        zip_code: "",
+        state: "",
+        to_call: "",
+        Help_you: "",
+        Location: "",
+        start_project: "",
+        referral: "",
+        Comments: "",
+        message: ""
+        });
       };
 
     return (
@@ -47,14 +64,21 @@ function Contact() {
                 <p>
                 It doesn't matter if you're looking to remodel your home, 
                 take care of some much-needed home maintenance, or address some repairs 
-                inside of your home, we're here to help. Schedule your consultation today 
+                inside of your home, we're here 
+                </p>
+            </div>
+            <div class='l-par'>
+                <p>
+                to help. Schedule your consultation today 
                 so we can discuss your project!
                 </p>
             </div>
             <br></br>
             <div class='greetings'>
+                <header>
                 Get in touch today!
-            </div>
+                </header>
+            </div><br></br>
             <div class='form-container'>
                 <form onSubmit={handleSubmit}>
                     <div class='name'>
@@ -209,7 +233,7 @@ function Contact() {
                             onChange={handleChange}
                             /><br></br>
                         </label><br></br>
-                        <button type="submit">Send</button>
+                        <button type="submit" onClick="alert('Hello World!')">Send</button>
                     </form>
                 </div>
         </div>
