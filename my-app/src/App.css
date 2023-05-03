@@ -4,20 +4,19 @@
   color: white;
 }
 
-header{
-  background-color: rgb(16, 32, 24);
+.tab{
+  background-color: rgb(58, 44, 38);
   color: white;
 }
 
-h1{
+.title{
   text-decoration: underline;
-  text-align: right;
-  padding-right: 50px;
+  text-align: center;
 }
 
-h2{
+.subtitle{
   font-family:serif;
-  text-align: right;
+  text-align: center;
   padding-right: 50px;
 }
 
@@ -39,4 +38,28 @@ h2{
   padding-left: 210px;
   display: flex;
   font-size: 110%;
+}
+
+form{
+  padding:30px;
+  
+}
+
+input[type=text], select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+}
+
+
+.name{
+  display: inline-block;
+  grid-gap: 30px;
+  
+  width: 80%;
 }

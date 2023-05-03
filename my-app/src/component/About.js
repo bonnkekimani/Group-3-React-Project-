@@ -3,10 +3,16 @@ import React from 'react';
 function About() {
     return (
         <div className='about'>
-            <header>
-                <h1>ABOUT US</h1>
-                <h2>The Safe, Guaranteed Solution to Your Home Repair and <br></br>Maintenance Needs</h2>
-            </header>
+            <div class='tab'>
+                <header>
+                    <div class='title'>
+                        <h1>ABOUT US</h1>
+                    </div>
+                    <div class='subtitle'>
+                        <h2>The Safe, Guaranteed Solution to Your Home Repair and Maintenance Needs</h2>
+                    </div>
+                </header>
+            </div>
             <div class='container'>
                 <div class="image">
                     <img src="https://images.unsplash.com/photo-1607400201515-c2c41c07d307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG9tZSUyMHJlcGFpcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="repair"></img>
