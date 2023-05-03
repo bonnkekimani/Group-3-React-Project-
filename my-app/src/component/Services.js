@@ -64,9 +64,49 @@ function Services() {
           },
  ]);
   return (
+
     <div className='Services'>
-        <section>
         <h1>Services</h1>
+        <section>
+            <h2>Service And Repair Packages</h2>
+            <div className='serviveDetails'>
+            <div className='TextBox1'>
+            <h3>SERVICE CALLS</h3>
+            <h4> Dispatch Fee </h4>
+                  <p>
+                 
+               one time	
+              We arrive in a clearly marked truck, fully stocked with many of the common parts and tools needed to maintain your RV. 
+              We provide a trained, certified, insured technician who is familiar with many of the systems you need to maintain your safety and comfort,
+              and we travel for free up to 25 miles from Harrison, TN or our mobile base when roving (shown on our web map).Mileage Fee, one way 
+             When the distance exceeds 25 miles we may charge per mile one-way for our initial trip to you, calculated from our base in Harrison, 
+             TN or our mobile base when roving. Serious off-road travel over 1 mile may incur an up-charge. Trips to acquire specialty parts may be charged the Hourly Fee for the time they take.
+                  </p><br></br>
+                  
+                  <h4>Hourly Fee, min. 1 hr.</h4>
+                <p> We charge an Hourly Fee for each Certified RV Technician once onsite and work begins and until work or travel stops, with a 1 hour minimum.
+                 PLEASE NOTE: We do NOT charge a "flat rate" like the dealerships.
+                 We pride ourselves on quality work, done expediently, and done right, and we never cut corners to "beat the clock".
+                </p> <br></br>
+                <h4>TYPICAL MAINTENANCE SERVICES</h4>
+
+                
+                   <li>Water Heater Service	from $100</li> 
+                   <li>Water Heater Service	from $100</li> 
+                   <li>Furnace Service	from $100</li> 
+                   <li>Air Conditioner Service	from $150</li> 
+                
+             </div>
+             <div className='TextBox2'>
+                
+               
+
+             </div>
+            </div>
+            
+        </section>
+        <section>
+        
                 <h2>WHAT CAN OUR PROFESSIONALS DO FOR YOU?</h2>
             <div className='cards'>
                {

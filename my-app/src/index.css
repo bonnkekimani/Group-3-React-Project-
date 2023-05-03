@@ -68,3 +68,21 @@ section{
   cursor: pointer;
   transition: 3ms;
 }
+.serviceDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.TextBox1{
+  max-width: 50%;
+  max-height:15%;
+}
+.TextBox2{
+
+    font-size: 20px;
+    justify-content: center;
+    padding-left: 210px;
+    display: flex;
+    font-size: 110%;
+
+}
