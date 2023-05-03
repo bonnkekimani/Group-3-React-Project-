@@ -51,7 +51,7 @@
 
 .tab{
   background-color: rgb(68, 70, 66);
-  color: rgb(255, 153, 0);
+  color: orangered;
 }
 
 .title{
@@ -202,4 +202,21 @@ li a:hover:not(.active) {
 
 .active {
   background-color: #04AA6D;
+}
+
+.schedule-title{
+  color: black;
+}
+
+.schedule-details{
+  color: orangered;
+}
+
+.wtitle{
+  text-align: center;
+}
+
+.wsubtitle{
+  text-align: center;
+  color: orangered;
 }

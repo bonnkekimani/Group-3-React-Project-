@@ -7,7 +7,7 @@ function Work(){
                 <h2>HOW WE WORK</h2>
             </div>
             <div class='wsubtitle'>
-                <h3>Hiring a service should be easy. Here's what you can expect
+                <h3>Hiring a service should be easy. <br></br>Here's what you can expect
                      when you hire us.</h3>
             </div>
             <div class='schedule-title'>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ReviewCard = ({ review, rating }) => {
+const ReviewCard = ({ review, rating, name }) => {
   const stars = [];
   for (let i = 0; i < rating; i++) {
     stars.push(<span key={i}>&#9733;</span>);
@@ -9,6 +9,7 @@ const ReviewCard = ({ review, rating }) => {
     <div>
         <div>{stars}</div>
         <p>{review}</p>
+        <p>{name}</p>
     </div>
   );
 };

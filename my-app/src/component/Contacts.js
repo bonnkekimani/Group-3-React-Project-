@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Contact() {
+function Contacts() {
     const [formData, setFormData] = useState([]);
     const [newformData, setnewFormData] = useState({
         fname: '',
@@ -237,4 +237,4 @@ function Contact() {
     )
 }
 
-export default Contact;
+export default Contacts;
