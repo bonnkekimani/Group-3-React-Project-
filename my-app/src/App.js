@@ -9,15 +9,19 @@ import Contacts from './component/Contacts';
 import NavBar from "./component/NavBar";
 import SignUpform from './component/SignUp';
 import Footer from './component/Footer';
+import Home from './component/Home';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+     
       <NavBar/>
+    
       <Routes>
-        <Route path="/" element={<About/>}></Route>
-        {/* <Route path="/work" element={<Work/>}></Route> */}
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/about" element={<About/>}></Route>
+        <Route path="/work" element={<Work/>}></Route>
         <Route path="/services" element={<Services/>}></Route>
         <Route path="/reviews" element={<Reviews/>}></Route>
         <Route path="/contacts" element={<Contacts/>}></Route>

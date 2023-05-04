@@ -384,6 +384,11 @@ button[type="submit"] {
   flex-wrap: wrap;
 }
 
+
+
+.slider-container {
+  display: flex;
+}
 .image-carousel {
   display: inline-block;
   align-items: center;
@@ -459,3 +464,7 @@ button[type="submit"] {
   display: flex;
   font-size: 110%;
 }
+.handypic{
+  width: 100%;
+}
+
