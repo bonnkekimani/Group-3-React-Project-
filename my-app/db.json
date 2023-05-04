@@ -2,6 +2,7 @@
   "profiles": [
     {
       "id": 1,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
       "name": "John Kamau",
       "description": "Let me keep your house different from outside",
       "category": "Plumber"
@@ -9,6 +10,7 @@
     },
     {
       "id": 2,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
       "name": "Morris Johnson",
       "description": "Most have said I have a solution to everything, they're not wrong",
       "category": "Repair man"
@@ -16,13 +18,15 @@
     },
     {
       "id": 3,
-      "name": "2019-12-02",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
+      "name": "Mkadin Ale",
       "description": "I'll make your home a heaven",
       "category": "Interior Designer"
      
     },
     {
       "id": 4,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
       "name": "Alvin Adams",
       "description": "Your better option to a great home ",
       "category": "Home Maintanance"
@@ -30,6 +34,7 @@
     },
     {
       "id": 5,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
       "name": "Orina Ephy",
       "description": "Let there be light",
       "category": "Electrician"
@@ -37,6 +42,7 @@
     },
     {
       "id": 6,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
       "name": "Brian KIbet",
       "description": "You break it I fix it",
       "category": "Repair man"
@@ -45,12 +51,14 @@
     {
       "id": 7,
       "name": "Adama Traoure",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
       "description": "I make your home a safe haven for you and loved ones",
       "category": "Home Maintanance"
       
     },
     {
       "id": 8,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
       "name": "George Ingabo",
       "description": "Converts a house to a home",
       "category": "Interior Designer"
@@ -58,6 +66,7 @@
     },
     {
       "id": 9,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
       "name": "Joy Waka",
       "description": "I yelling timber",
       "category": "Carpenter"
@@ -65,6 +74,7 @@
     },
     {
       "id": 10,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
       "name": "Melvin Mela",
       "description": "Mr. Light up your world",
       "category": "Electrician"
@@ -72,6 +82,7 @@
     },
     {
       "id": 11,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
       "name": "Steve Kirwa",
       "description": "I see colors",
       "category": "Painter"
@@ -79,6 +90,7 @@
     },
     {
       "id": 12,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1?v=4",
       "name": "Kimani Bonnke",
       "description": "Your trusted furniture plug",
       "category": "Carpenter"

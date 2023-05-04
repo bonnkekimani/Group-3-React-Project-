@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
-// import MultiCarousel from './multicarousel';
 // import Carousel from 'react-multi-carousel';
 // import 'react-multi-carousel/lib/styles.css';
 // import Profiles from './profiles.json'
@@ -68,6 +67,18 @@ function Services() {
             And all our repair service is backed by our Done Right Promise, which means our job is not done until it’s right!` 
           },
  ]);
+ const [profiles, setProfiles] = useState([]);
+
+
+
+ const getProfiles = async () => {
+     const response = await fetch("http://localhost:4000/profiles");
+     const FinalData = await response.json();
+     setProfiles(FinalData)
+ }
+ useEffect(() => {
+  getProfiles();
+}, [])
   return (
 
     <div className='Services'>
@@ -130,14 +141,44 @@ function Services() {
             </div>
         
         </section>
-           <section>
+           <section className='Section3'>
           <h3>Our Trusted professionals</h3>
-             
+          <div className="container">
+               
+               {
+                   profiles.map((profile) => {
+                       return (
+                          
+                           <div className="card_item" key={profile.id}>
+                               <div className="card_inner">
+                                   <img src={profile.avatar_url} alt="" />
+                                   <div className="userName">{profile.name}</div>
+                                   {/* <div className="userUrl">{profile.description}</div> */}
+                                   <div className="detail-box">
+
+                                       <div className="gitDetail"><span>Services</span>23</div>
+                                       <div className="gitDetail"><span>Following</span>45</div>
+                                       <div className="gitDetail"><span>Followers</span>11</div>
+                                   </div>
+                                   <button className="seeMore">Choose Me</button>
+                                   
+                               </div>
+
+                           </div>
+                          
+                       )
+                   })
+               }
+
+           </div>              
+
+          
           
         </section>
         
         </div>
   )
+              }
   // function caroselCards(){
   //   return (
   //      <div className='carousel'>
@@ -166,7 +207,7 @@ function Services() {
     
     
   // }
- 
-}
+            
+
 
 export default Services
