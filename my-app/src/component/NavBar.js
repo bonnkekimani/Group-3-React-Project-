@@ -5,7 +5,7 @@ const NavBar=()=>{
     console.log("Navbar Page")
   return (
     <div className="nav">
-        <ul>
+        <ul className="nav-ul">
             <li><Link to="/" className="nav-link">About</Link></li>
             <li><Link to="/Work" className="nav-link">Work</Link></li>
             <li><Link to="/Services" className="nav-link">Services</Link></li>

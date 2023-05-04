@@ -1,18 +1,18 @@
 .about{
   padding: 30px;
-  background-color: rgb(68, 70, 66);
+  background-color: rgb(87, 92, 82);
   color: white;
 }
 
 .work{
   padding: 30px;
-  background-color: rgb(68, 70, 66);
+  background-color: #5a58583b;
   color: white;
 }
 
 .reviews{
   padding: 30px;
-  background-color: rgb(68, 70, 66);
+  background-color: #5a58583b;
   color: white;
 }
 
@@ -44,14 +44,29 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #020101;
-  color: orangered;
+  border-radius: 50px;
+  background-color: #333;
+  color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.tab{
-  background-color: rgb(68, 70, 66);
-  color: orangered;
+.wcontent{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+  width: 100%;
+  margin: 50px 0;
+}
+
+.wcontent > div {
+  display: row;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: #333;
+  color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .title{
@@ -87,7 +102,7 @@
 
 .contact{
   padding: 30px;
-  background-color: rgb(61, 60, 60);
+  background-color: #5a58583b;
   color: white;
 }
 
@@ -109,8 +124,9 @@
   font-weight:bold;
   font-size: 27px;
   width: 100%; 
+  border-radius: 50px;
   color: white;
-  background-color: orangered;
+  background-color: #333;
   padding-top: 14px;
   padding-bottom: 14px; 
 }
@@ -119,7 +135,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: orangered
 }
 
 label {
@@ -166,8 +181,9 @@ input[type=submit]:hover {
 }
 
 .name{
-  display: inline-block;
+  display:inline-flexbox;
   grid-gap: 30px;
+  width: 100%;
 }
 
 textarea{
@@ -179,9 +195,22 @@ textarea{
 ul {
   list-style-type: none;
   margin: 0;
+  /* width: 100%; */
+  /* padding: 5px; */
+  overflow: hidden;
+  background-color: #c74040;
+}
+
+.benefits-par{
+  width: 1000px;
+}
+
+.nav-ul {
+  list-style-type: none;
+  margin: 0;
   padding: 5px;
   overflow: hidden;
-  background-color: #333;
+  background-color: #252121;
 }
 
 li {
@@ -204,25 +233,17 @@ li a:hover:not(.active) {
   background-color: #04AA6D;
 }
 
-.schedule-title{
-  color: black;
-}
-
-.schedule-details{
-  color: orangered;
-}
-
 .wtitle{
   text-align: center;
 }
 
 .wsubtitle{
   text-align: center;
-  color: orangered;
+  color: white;
 }
 button[type="submit"] {
-  background-color: #20fb20e6;
-  color: white;
+  background-color: green;
+  color: black;
   padding: 1rem 2rem;
   border: none;
   border-radius: 4px;
@@ -415,4 +436,26 @@ button[type="submit"] {
 .gallery{
   text-align: center;
   color: white;
+}
+
+.living {
+  display: inline-;
+  align-items: center;
+  justify-content: right;
+}
+
+.image2 {
+  width: 15%;
+  height: 10%;
+  padding-left: 30rem;
+  
+}
+
+.benefits {
+  font-size: 15px;
+  width:100%;
+  /* justify-content: center; */
+  padding-right: 50rem;
+  display: flex;
+  font-size: 110%;
 }

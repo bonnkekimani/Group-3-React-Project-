@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 function Contacts() {
-    const [formData, setFormData] = useState([]);
-    const [newformData, setnewFormData] = useState({
+    const [errors, setErrors] = useState([]);
+    const [formData, setFormData] = useState({
         fname: '',
         lname: "",
         email: "",
@@ -21,33 +21,48 @@ function Contacts() {
     });
     
     const handleChange = (event) => {
-        setnewFormData({
-          ...newformData,
+        setFormData({
+          ...formData,
           [event.target.name]: event.target.value
         });
-      }
+    }
     
       function handleSubmit (e) {
         e.preventDefault();
-        setFormData([...formData, newformData]);
-        setnewFormData({
-            fname: '',
-            lname: "",
-            email: "",
-            phone: "",
-            address: "",
-            city: "",
-            zip_code: "",
-            state: "",
-            to_call: "",
-            help_you: "",
-            location: "",
-            start_project: "",
-            referral: "",
-            comments: "",
-            message: ""
-        });
+        if (setFormData.length > 0)  {
+            setFormData({
+                fname: '',
+                lname: "",
+                email: "",
+                phone: "",
+                address: "",
+                city: "",
+                zip_code: "",
+                state: "",
+                to_call: "",
+                help_you: "",
+                location: "",
+                start_project: "",
+                referral: "",
+                comments: "",
+                message: ""
+            });
+            setErrors([]);
+        } else {
+            setErrors(["Please fill out all fields"]);
+        }
+        e.target.reset();
+        
+        
       };
+
+      function Button() {
+        const handleClick = () => {
+          alert("Your inquiry has been submitted");
+        };
+      
+        return <button type="submit" onClick={handleClick}>SEND</button>;
+      }
 
     return (
         <div className='contact'>
@@ -86,7 +101,7 @@ function Contacts() {
                             <input
                                 type="text"
                                 name="fname"
-                                value={newformData.fname}
+                                value={formData.fname}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -95,18 +110,17 @@ function Contacts() {
                             <input
                                 type="text"
                                 name="lname"
-                                value={newformData.lname}
+                                value={formData.lname}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
-                        </div><br></br>
-                        
+                        </div><br></br> 
                         <label>
                             Email: <br></br>
                             <input
                             type="text"
                             name="email"
-                            value={newformData.email}
+                            value={formData.email}
                             onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -115,7 +129,7 @@ function Contacts() {
                             <input
                                 type="tel"
                                 name="phone"
-                                value={newformData.phone}
+                                value={formData.phone}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -124,7 +138,7 @@ function Contacts() {
                             <input
                                 type="text"
                                 name="address"
-                                value={newformData.address}
+                                value={formData.address}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -133,7 +147,7 @@ function Contacts() {
                             <input
                                 type="text"
                                 name="city"
-                                value={newformData.city}
+                                value={formData.city}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -142,7 +156,7 @@ function Contacts() {
                             <input
                                 type="text"
                                 name="zip_code"
-                                value={newformData.zip_code}
+                                value={formData.zip_code}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -151,7 +165,7 @@ function Contacts() {
                             <input
                                 type="text"
                                 name="state"
-                                value={newformData.state}
+                                value={formData.state}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -160,7 +174,7 @@ function Contacts() {
                             <input
                                 type="text"
                                 name="to_call"
-                                value={newformData.to_call}
+                                value={formData.to_call}
                                 onChange={handleChange}
                             /><br></br>
                         </label><br></br>
@@ -170,31 +184,30 @@ function Contacts() {
                             <input 
                                 type="checkbox" 
                                 name="help" 
-                                value={newformData.help_you}
+                                value={formData.help_you}
                                 onChange={handleChange} />
                                 Home Remodeling <br></br>
                             <input 
                                 type="checkbox" 
                                 name="help" 
-                                value={newformData.help_you} 
+                                value={formData.help_you} 
                                 onChange={handleChange} />
                                 Handyman Work <br></br>
                         </label><br></br>
                         <label>Location</label>  <br></br>
-                        <select id="Locations" onChange={handleChange}>
+                        <select id="Locations" value={formData.location} onChange={handleChange}>
                             <option value="" >Please select </option>
-                            <option value={newformData.location}>Nairobi, KEN</option>
-                            <option value={newformData.location}>Mombasa, KEN</option>
-                            <option value={newformData.location}>Nakuru, KEN</option>
-                            <option value={newformData.location}>Kisumu, KEN</option>
-                            <option value={newformData.location}>Nyeri, KEN</option>
-                            <option value={newformData.location}>Garissa, KEN</option>
-                            <option value={newformData.location}>Machakos, KEN</option>
-                            <option value={newformData.location}></option>
+                            <option value="">Nairobi, KEN</option>
+                            <option value="">Mombasa, KEN</option>
+                            <option value="">Nakuru, KEN</option>
+                            <option value="">Kisumu, KEN</option>
+                            <option value="">Nyeri, KEN</option>
+                            <option value="">Garissa, KEN</option>
+                            <option value="">Machakos, KEN</option>
                         </select><br></br>
                         <br></br>
                         <label>How Soon Would You Like to Start Your Project</label>  <br></br>
-                        <select id="time" onChange={handleChange}>
+                        <select id="time" value={formData.time} onChange={handleChange}>
                             <option value="" > Please select </option>
                             <option value="option1">Now</option>
                             <option value="option2">Next couple of weeks</option>
@@ -206,7 +219,7 @@ function Contacts() {
                         </select><br></br>
                         <br></br>
                         <label> How did you Hear about Mr. Handyman? </label>  <br></br>
-                        <select id="Referrals" onChange={handleChange}>
+                        <select id="Referrals" value={formData.referral} onChange={handleChange}>
                             <option value="" > Please select </option>
                             <option value="option1">Repeat Customer</option>
                             <option value="option2">Google</option>
@@ -230,10 +243,17 @@ function Contacts() {
                             onChange={handleChange}
                             /><br></br>
                         </label><br></br>
-                        <button type="submit" onClick="alert('Hello World!')">Send</button>
+                        <Button/>
                     </form>
+                    {errors.length > 0
+                    ? errors.map((error, index) => (
+                    <p key={index} style={{ color: "red" }}>
+                    {error}
+                    </p>
+                    ))
+                    : null}
+                    </div>
                 </div>
-        </div>
     )
 }
 

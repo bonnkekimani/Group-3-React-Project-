@@ -7,7 +7,8 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const Footer = () =>{
 
-    return  <footer className="footer">
+    return  (
+    <footer className="footer">
     <div className="foot-container">
 
  
@@ -147,7 +148,7 @@ const Footer = () =>{
     </div>
 </footer>
 
-
+    );
 
 }
 

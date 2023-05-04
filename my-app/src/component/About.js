@@ -1,5 +1,6 @@
 import React from 'react';
 import ImageSlider from './ImageSlider';
+import Work from './Work';
 
 function About() {
     const images = [
@@ -7,6 +8,7 @@ function About() {
         "https://d217qqw9cv4mkx.cloudfront.net/sub/50098/images/blogs/Before-and-After-Hillsborough.1).jpg",
         "https://www.windowsandmoreinc.com/wp-content/uploads/2016/12/before-after-bay-bow-windows.jpg",
         "https://sublimegroup.com.au/wp-content/uploads/2018/02/Kitchens-Brisbane-Before-and-After-2-1635x581.jpg",
+        "https://europaving.com/wp-content/grand-media/image/bafore_after_brick_driveway3.jpg",
       ];
 
     return (
@@ -20,7 +22,7 @@ function About() {
                         <h2>The Safe, Guaranteed Solution to Your Home Repair and Maintenance Needs</h2>
                     </div>
                 </header>
-            </div>
+            </div><br></br>
             <div class='container'>
                 <div class="image">
                     <img src="https://images.unsplash.com/photo-1607400201515-c2c41c07d307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG9tZSUyMHJlcGFpcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="repair"></img>
@@ -46,36 +48,41 @@ function About() {
                     </div>
                 </div>
             </div><br></br>
-            <p>
-            Here are a few reasons why our customers recommend Mr. Handyman to their friends.
-            </p>
-            <div className='benefits'>
-                <ul>
-                    <li>
-                    - One simple call provides easy scheduling
-                    </li><br></br>
-                    <li>
-                    - On time arrival
-                    </li><br></br>
-                    <li>
-                    - Job is done right the first time
-                    </li><br></br>
-                    <li>
-                    - Wide variety of repair, maintenance and improvements services
-                    </li><br></br>
-                    <li>
-                    - Technicians have an average of 10 years’ experience in the trades and are fully insured for your safety
-                    </li><br></br>
-                    <li>
-                    - We promise to clean up when we’re done
-                    </li>
-                </ul><br></br>
+            <div className='living'>
+            
+                {/* <div className='benefits'>
+                    
+                    <ul className='benefits-par'>
+                    <p>
+                    Here are a few reasons why our customers recommend Mr. Handyman to their friends.
+                    </p>
+                        <li>
+                        - One simple call provides easy scheduling
+                        </li><br></br>
+                        <li>
+                        - On time arrival
+                        </li><br></br>
+                        <li>
+                        - Job is done right the first time
+                        </li><br></br>
+                        <li>
+                        - Wide variety of repair, maintenance and improvements services
+                        </li><br></br>
+                        <li>
+                        - Technicians have an average of 10 years’ experience in the trades and are fully insured for your safety
+                        </li><br></br>
+                        <li>
+                        - We promise to clean up when we’re done
+                        </li>
+                    </ul><br></br>
+                </div> */}
             </div>
             <br></br>
             <div className='gallery'>
                 <h2>Gallery</h2>
             </div><br></br>
-            <ImageSlider images={images}/>
+            <ImageSlider images={images} />
+            <Work/>
         </div>
     )
 }
