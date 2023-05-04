@@ -11,22 +11,23 @@ function About() {
 
     return (
         <div className='about'>
-            <div class='tab'>
-                <header>
-                    <div class='atitle'>
-                        <h1>ABOUT US</h1>
-                    </div>
-                    <div class='asubtitle'>
-                        <h2>The Safe, Guaranteed Solution to Your Home Repair and Maintenance Needs</h2>
-                    </div>
-                </header>
-            </div>
+
             <div class='container'>
                 <div class="image">
                     <img src="https://images.unsplash.com/photo-1607400201515-c2c41c07d307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG9tZSUyMHJlcGFpcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="repair"></img>
                 </div>
                 <div class='side-to-side'>
                     <div>
+                    <div class='tab'>
+                <header>
+                    <div class='atitle'>
+                        <h1>ABOUT US<br/></h1>
+                    </div>
+                    <div class='asubtitle'>
+                        <h2>The Safe, Guaranteed Solution to Your Home Repair and Maintenance Needs<br/><br/></h2>
+                    </div>
+                </header>
+                </div>
                     <p>Mr. Handyman is your one-call solution for a wide range of home maintenance and repair 
                         needs. Our uniformed technicians are fully insured professionals. We arrive on time in 
                         uniform and a marked van with the tools to complete the job right.
@@ -50,6 +51,7 @@ function About() {
             Here are a few reasons why our customers recommend Mr. Handyman to their friends.
             </p>
             <div className='benefits'>
+                
                 <ul>
                     <li>
                     - One simple call provides easy scheduling

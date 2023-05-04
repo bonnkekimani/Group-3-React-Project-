@@ -9,7 +9,7 @@ function Home() {
   return (
     <div>
         <div className='homepage'>  
-            <img src={handyman} className='handypic'/>     
+            <img src={handyman} className='handypic' alt='Page not found'/>     
          </div>
          <About /> 
          <Services />

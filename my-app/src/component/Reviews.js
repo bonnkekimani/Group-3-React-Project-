@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import ReviewCard from './ReviewCard';
 
 function Reviews(){
+
+
+
     return(
+        
+                
         <div className="reviews">
             <div class='testimonies'>
-                <h2>HANDYMAN TESTIMONIALS AND REVIEWS</h2>
+               <marquree> <h2>HANDYMAN TESTIMONIALS AND REVIEWS</h2> </marquree>
             </div><br></br>
             <div class='review-details'>
                 <p>
@@ -49,10 +54,7 @@ function Reviews(){
                 us select the best door for home and installed it. We plan to take care of the staining 
                 ourselves and he gave us advice on where to get the best materials and instructions for 
                 how to. We will request Les in the future." name="Huffmans , The Colony, TX" />
-                <ReviewCard rating={5} review="Joel was our Handyman. He went above and beyond the call of duty. 
-                All of his work was first class, quick and professional. He even worked on a window outside in a 
-                rain storm. We absolutely will use your service again. Kudos to you for having an awesome employee 
-                like Joel. We highly recommend your services to anyone." name="Okoh Andrew , Los Angeles, CA" />
+
             </div>
         </div>
     )
