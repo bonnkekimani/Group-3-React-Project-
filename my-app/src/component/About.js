@@ -2,6 +2,13 @@ import React from 'react';
 import ImageSlider from './ImageSlider';
 
 function About() {
+    const images = [
+        
+        "https://d217qqw9cv4mkx.cloudfront.net/sub/50098/images/blogs/Before-and-After-Hillsborough.1).jpg",
+        "https://www.windowsandmoreinc.com/wp-content/uploads/2016/12/before-after-bay-bow-windows.jpg",
+        "https://sublimegroup.com.au/wp-content/uploads/2018/02/Kitchens-Brisbane-Before-and-After-2-1635x581.jpg",
+      ];
+
     return (
         <div className='about'>
             <div class='tab'>
@@ -42,27 +49,33 @@ function About() {
             <p>
             Here are a few reasons why our customers recommend Mr. Handyman to their friends.
             </p>
-            <ul>
-                <li>
-                - One simple call provides easy scheduling
-                </li><br></br>
-                <li>
-                - On time arrival
-                </li><br></br>
-                <li>
-                - Job is done right the first time
-                </li><br></br>
-                <li>
-                - Wide variety of repair, maintenance and improvements services
-                </li><br></br>
-                <li>
-                - Technicians have an average of 10 years’ experience in the trades and are fully insured for your safety
-                </li><br></br>
-                <li>
-                - We promise to clean up when we’re done
-                </li>
-            </ul><br></br>
-            <ImageSlider/>
+            <div className='benefits'>
+                <ul>
+                    <li>
+                    - One simple call provides easy scheduling
+                    </li><br></br>
+                    <li>
+                    - On time arrival
+                    </li><br></br>
+                    <li>
+                    - Job is done right the first time
+                    </li><br></br>
+                    <li>
+                    - Wide variety of repair, maintenance and improvements services
+                    </li><br></br>
+                    <li>
+                    - Technicians have an average of 10 years’ experience in the trades and are fully insured for your safety
+                    </li><br></br>
+                    <li>
+                    - We promise to clean up when we’re done
+                    </li>
+                </ul><br></br>
+            </div>
+            <br></br>
+            <div className='gallery'>
+                <h2>Gallery</h2>
+            </div><br></br>
+            <ImageSlider images={images}/>
         </div>
     )
 }
