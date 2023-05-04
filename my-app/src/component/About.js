@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageSlider from './ImageSlider';
 
 function About() {
     return (
@@ -37,7 +38,7 @@ function About() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </div><br></br>
             <p>
             Here are a few reasons why our customers recommend Mr. Handyman to their friends.
             </p>
@@ -60,7 +61,8 @@ function About() {
                 <li>
                 - We promise to clean up when we’re done
                 </li>
-            </ul>
+            </ul><br></br>
+            <ImageSlider/>
         </div>
     )
 }

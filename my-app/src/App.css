@@ -310,7 +310,7 @@ button[type="submit"] {
     background-color: #fff;
     color: #333;
   }
-  .container {
+  .foot-container {
     display: flex;
     margin: 2%;
     padding: 10%;
@@ -328,7 +328,7 @@ button[type="submit"] {
       color: rgb(17, 15, 14);  
       }  
     
-h1{
+.login-font{
   font-size: 16px;
   font-style: oblique;
 }
@@ -361,4 +361,43 @@ h1{
 .row{
   display: flex;
   flex-wrap: wrap;
+}
+
+
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.image-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.image {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.image:hover {
+  transform: rotateY(180deg);
 }

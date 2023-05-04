@@ -6,7 +6,7 @@ function Reviews(){
         <div className="reviews">
             <div class='testimonies'>
                 <h2>HANDYMAN TESTIMONIALS AND REVIEWS</h2>
-            </div>
+            </div><br></br>
             <div class='review-details'>
                 <p>
                 Don’t just take our word for it; see what real Mr. Handyman customers have to 

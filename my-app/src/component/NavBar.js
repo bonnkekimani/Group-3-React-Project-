@@ -8,9 +8,10 @@ const NavBar=()=>{
         <ul>
             <li><Link to="/" className="nav-link">About</Link></li>
             <li><Link to="/Work" className="nav-link">Work</Link></li>
-            <li><Link to="/Gallery" className="nav-link">Gallery</Link></li>
+            <li><Link to="/Services" className="nav-link">Services</Link></li>
             <li><Link to="/Reviews" className="nav-link">Reviews</Link></li>
             <li><Link to="/Contacts" className="nav-link">Contacts</Link></li>
+            <li><Link to="/SignUpForm" className="nav-link">SignUpForm</Link></li>
         </ul>
     </div>
   );

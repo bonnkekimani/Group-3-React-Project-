@@ -28,7 +28,7 @@ const SignUpform = () => {
             <button onClick={handleLogout}>Logout</button>
         </div>
         ) : (
-        <div>
+        <div className="login-font">
             <h1>Please Login</h1>
             <button onClick={handleLogin}>Login</button>
             <div class="media-options">
