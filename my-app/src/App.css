@@ -80,7 +80,7 @@
 .side-to-side {
   font-size: 15px;
   justify-content: center;
-  padding-left: 210px;
+  padding-left: 360px;
   display: flex;
   font-size: 110%;
 }
@@ -328,7 +328,7 @@ button[type="submit"] {
       color: rgb(17, 15, 14);  
       }  
     
-h1{
+.login-font{
   font-size: 16px;
   font-style: oblique;
 }
