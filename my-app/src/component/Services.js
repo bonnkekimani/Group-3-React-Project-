@@ -78,7 +78,7 @@ function Services() {
 
 
  const getProfiles = async () => {
-     const response = await fetch("http://localhost:4000/profiles");
+     const response = await fetch("https://web-app-4vmb.onrender.com/profiles");
      const FinalData = await response.json();
      setProfiles(FinalData)
  }
@@ -86,10 +86,17 @@ function Services() {
   getProfiles();
 }, [])
 
+
   const [count, setCount]=useState(0);
-   
+  const [isClicked, setIsClicked] = useState(false);
   function handleClick(){
+    if (isClicked) {
       setCount((count)=>count+1);
+    } else {
+      setCount((count)=>count+1);
+    }
+    setIsClicked(!isClicked);
+      
   }
    const [query,setQuery]=useState("");
    
@@ -193,8 +200,8 @@ function Services() {
                                        <div className="gitDetail"><span>Followers</span>11</div>
                                    </div>
                                    <div className="gitDetail">{profile.category}</div>
-                                   <button className="chooseMe" onClick={handleClick}>Like</button>
-                                   ❤️<number>{count}</number>
+                                   <button className="likes" onClick={handleClick} key={profile.id}>Like ❤️</button>
+                                   <number className="updateLikes">{count}</number>
                       
                               
                               </div>
