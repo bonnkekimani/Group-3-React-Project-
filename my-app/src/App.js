@@ -1,4 +1,6 @@
+
 import './App.css';
+import Services from './component/Services';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from './component/About';
@@ -12,6 +14,7 @@ import Footer from './component/Footer';
 function App() {
   return (
     <div className="App">
+      <Services/>
       <SignUpform/>
      <BrowserRouter>
       <NavBar/>
