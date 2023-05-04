@@ -58,7 +58,7 @@ function Contacts() {
                 </div>
             <div class='request'>
                 <h2>Request Service</h2>
-            </div>
+            </div><br></br>
             <div class='r-par'>
                 <p>
                 It doesn't matter if you're looking to remodel your home, 
