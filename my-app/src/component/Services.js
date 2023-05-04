@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
+import Slider from "react-slick"
+// import "~slick-carousel/slick/slick.css"; 
+
 // import Carousel from 'react-multi-carousel';
 // import 'react-multi-carousel/lib/styles.css';
 // import Profiles from './profiles.json'
@@ -79,6 +82,21 @@ function Services() {
  useEffect(() => {
   getProfiles();
 }, [])
+
+  const [count, setCount]=useState(0);
+   
+  function handleClick(){
+      setCount((count)=>count+1);
+  }
+
+  const settings = {
+    dots: true,
+    // infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  };
+
   return (
 
     <div className='Services'>
@@ -143,6 +161,7 @@ function Services() {
         </section>
            <section className='Section3'>
           <h3>Our Trusted professionals</h3>
+          <Slider {...settings}>
           <div className="container">
                
                {
@@ -160,8 +179,9 @@ function Services() {
                                        <div className="gitDetail"><span>Following</span>45</div>
                                        <div className="gitDetail"><span>Followers</span>11</div>
                                    </div>
-                                   <button className="seeMore">Choose Me</button>
-                                   
+                                   <button className="chooseMe">Choose Me</button>
+                                   <button onClick={handleClick}>{count}</button>
+
                                </div>
 
                            </div>
@@ -172,42 +192,13 @@ function Services() {
 
            </div>              
 
-          
+           </Slider>
           
         </section>
         
         </div>
   )
               }
-  // function caroselCards(){
-  //   return (
-  //      <div className='carousel'>
-  //            {
-  //             Profiles.map(profile =>{
-  //               return (
-  //                 <div className='cards'>
-  //                    {profile.name} 
-  //                    {profile.description} 
-  //                    {profile.category} 
-
-
-  //                 </div>
-  //               )
-
-
-
-
-
-
-  //             })
-                
-  //            }
-    //    </div>
-    // );
-    
-    
-  // }
-            
-
+  
 
 export default Services
