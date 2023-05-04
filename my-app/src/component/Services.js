@@ -91,7 +91,8 @@ function Services() {
   function handleClick(){
       setCount((count)=>count+1);
   }
-
+   const [query,setQuery]=useState("");
+   
   // const s = {
   //   dots: true,
   //   // infinite: true,
@@ -134,14 +135,17 @@ function Services() {
                    <li>Air Conditioner Service	from $150</li> 
                 
              </div>
+            
              <div className='YouTube'>
                 <ReactPlayer controls url='https://youtu.be/psSNJgGl2lc'></ReactPlayer>
                
 
              </div>
+             
             </div>
             
         </section>
+       
         <section>
         
                 <h2>WHAT CAN OUR PROFESSIONALS DO FOR YOU?</h2>
@@ -165,29 +169,35 @@ function Services() {
            <section className='Section3'>
           <h3>Our Trusted professionals</h3>
           {/* <Slider {...settings}> */}
+          <div className='Search'>
+          <input type ="text" placeholder ='Search...' className='Search' onChange={e=>setQuery(e.target.value)}></input>
+        </div>
           <div className="container">
-         
-          
+        
                {
-                   profiles.map((profile) => {
+                   profiles.filter(profile=>profile.category.toLowerCase().includes(query)).map((profile) => {
                        return (
                           
                            <div className="card_item" key={profile.id}>
+                           
                                <div className="card_inner">
+                               
                                    <img src={profile.avatar_url} alt="" />
+                                  
                                    <div className="userName">{profile.name}</div>
                                    {/* <div className="userUrl">{profile.description}</div> */}
                                    <div className="detail-box">
-
+                                  
                                        <div className="gitDetail"><span>Services</span>23</div>
                                        <div className="gitDetail"><span>Following</span>45</div>
                                        <div className="gitDetail"><span>Followers</span>11</div>
                                    </div>
+                                   <div className="gitDetail">{profile.category}</div>
                                    <button className="chooseMe" onClick={handleClick}>Like</button>
-                                   ❤️<button>{count}</button>
+                                   ❤️<number>{count}</number>
                       
-                               </div>
-
+                              
+                              </div>
                            </div>
                           
                        )

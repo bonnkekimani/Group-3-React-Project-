@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Services/>
+     
       <NavBar/>
     
       <Routes>
