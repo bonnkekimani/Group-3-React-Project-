@@ -403,3 +403,8 @@ button[type="submit"] {
 .image:hover {
   transform: rotateY(180deg);
 }
+
+.handypic{
+  width: 100%;
+}
+
