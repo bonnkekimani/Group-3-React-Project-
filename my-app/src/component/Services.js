@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player'
 // import MultiCarousel from './multicarousel';
 // import Carousel from 'react-multi-carousel';
 // import 'react-multi-carousel/lib/styles.css';
@@ -103,7 +103,7 @@ function Services() {
                 
              </div>
              <div className='YouTube'>
-                {/* <ReactPlayer controls url='https://youtu.be/psSNJgGl2lc'></ReactPlayer> */}
+                <ReactPlayer controls url='https://youtu.be/psSNJgGl2lc'></ReactPlayer>
                
 
              </div>

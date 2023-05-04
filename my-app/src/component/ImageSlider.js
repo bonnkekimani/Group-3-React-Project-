@@ -1,49 +1,38 @@
 import React, { useState } from 'react';
 
-const images = [
-    'image1.jpg',
-    'image2.jpg',
-    'image3.jpg'
-  ];
-  
-  const ImageSlider = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-  
-    const goToPreviousSlide = () => {
-      const index = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
-      setCurrentIndex(index);
-    };
-  
-    const goToNextSlide = () => {
-      const index = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
-      setCurrentIndex(index);
-    };
-  
-    return (
-      <div className="slider-container">
-        <LeftArrow onClick={goToPreviousSlide} />
-        <Image src={images[currentIndex]} />
-        <RightArrow onClick={goToNextSlide} />
-      </div>
-    );
+function ImageSlider({ images }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleNext = () => {
+    setActiveIndex((activeIndex + 1) % images.length);
   };
-  
-  const LeftArrow = ({ onClick }) => (
-    <div className="arrow left" onClick={onClick}>
-      &lt;
+
+  const handlePrev = () => {
+    setActiveIndex((activeIndex - 1 + images.length) % images.length);
+  };
+
+  return (
+    <div className="image-carousel">
+      <div className="image-carousel-arrow" onClick={handlePrev}>
+        &lt;
+      </div>
+      <img src={images[activeIndex]} alt="" className="image-carousel-image" />
+      <div className='overlay'>
+        <span className={`text ${activeIndex === 0 ? "active" : ""}`}>
+          Text 1
+        </span>
+        <span className={`text ${activeIndex === 1 ? "active" : ""}`}>
+          Text 2
+        </span>
+        <span className={`text ${activeIndex === 2 ? "active" : ""}`}>
+          Text 3
+        </span>
+      </div>
+      <div className="image-carousel-arrow" onClick={handleNext}>
+        &gt;
+      </div>
     </div>
   );
-  
-  const RightArrow = ({ onClick }) => (
-    <div className="arrow right" onClick={onClick}>
-      &gt;
-    </div>
-  );
-  
-  const Image = ({ src }) => (
-    <div className="image-container">
-      <img src={src} alt="slider" className="image" />
-    </div>
-  );
+}
   
   export default ImageSlider;
