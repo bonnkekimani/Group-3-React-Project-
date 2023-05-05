@@ -1,5 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
+import { Link, Routes, Route } from 'react-router-dom';
+import Contacts from './Contacts';
+
+// import "~slick-carousel/slick/slick.css"; 
+
+// import React, { useState } from 'react'
+// import ReactPlayer from 'react-player'
+
 // import MultiCarousel from './multicarousel';
 // import Carousel from 'react-multi-carousel';
 // import 'react-multi-carousel/lib/styles.css';
@@ -68,12 +76,47 @@ function Services() {
             And all our repair service is backed by our Done Right Promise, which means our job is not done until it’s right!` 
           },
  ]);
+ const [profiles, setProfiles] = useState([]);
+
+
+
+ const getProfiles = async () => {
+     const response = await fetch("https://web-app-4vmb.onrender.com/profiles");
+     const FinalData = await response.json();
+     setProfiles(FinalData)
+ }
+ useEffect(() => {
+  getProfiles();
+}, [])
+
+
+  const [count, setCount]=useState(0);
+  const [isClicked, setIsClicked] = useState(false);
+  function handleClick(){
+    if (isClicked) {
+      setCount((count)=>count+1);
+    } else {
+      setCount((count)=>count+1);
+    }
+    setIsClicked(!isClicked);
+      
+  }
+   const [query,setQuery]=useState("");
+   
+  // const s = {
+  //   dots: true,
+  //   // infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 3
+  // };
+  
   return (
 
     <div className='Services'>
-        <h1>Services</h1>
+        <h1 className='ser1'><br/>Services<br/><br/></h1>
         <section>
-            <h2>Service And Repair Packages</h2>
+            <h2 className='ser2'>Service And Repair Packages</h2>
             <div className='serviveDetails'>
             <div className='TextBox1'>
             <h3>SERVICE CALLS</h3>
@@ -102,17 +145,20 @@ function Services() {
                    <li>Air Conditioner Service	from $150</li> 
                 
              </div>
+            
              <div className='YouTube'>
                 <ReactPlayer controls url='https://youtu.be/psSNJgGl2lc'></ReactPlayer>
                
 
              </div>
+             
             </div>
             
         </section>
-        <section>
+       
+        <section className='prof1'>
         
-                <h2>WHAT CAN OUR PROFESSIONALS DO FOR YOU?</h2>
+                <h2>WHAT CAN OUR PROFESSIONALS DO FOR YOU?<br/><br/><br/><br/></h2>
             <div className='cards'>
                {
                 cards.map((card,i)=>(
@@ -121,8 +167,18 @@ function Services() {
                 <p>
                     {card.description}
                 </p>
-                    <button id ='BtnService'>Request Service</button>
-                         
+                      {/* <button id ='BtnService'>Request Service</button>  */}
+
+                      <div>
+                      <Link to="/Contacts">
+                          <button id ='BtnService'>Request Service</button> 
+                      </Link>
+
+                         <Routes>
+                               <Route path="/about" element={<Contacts />} />
+                         </Routes>
+                      </div>
+    
                     </div>
                 ))
                } 
@@ -130,43 +186,55 @@ function Services() {
             </div>
         
         </section>
-           <section>
+           <section className='Section3'>
           <h3>Our Trusted professionals</h3>
-             
+          <h4>Search by Category</h4>
+          {/* <Slider {...settings}> */}
+          <div className='Search'>
+          <input type ="text" placeholder ='Search...' className='Search' onChange={e=>setQuery(e.target.value)}></input>
+        </div>
+          <div className="container">
+        
+               {
+                   profiles.filter(profile=>profile.category.toLowerCase().includes(query)).map((profile) => {
+                       return (
+                          
+                           <div className="card_item" key={profile.id}>
+                           
+                               <div className="card_inner">
+                               
+                                   <img src={profile.avatar_url} alt="" />
+                                  
+                                   <div className="userName">{profile.name}</div>
+                                   {/* <div className="userUrl">{profile.description}</div> */}
+                                   <div className="detail-box">
+                                  
+                                       <div className="gitDetail"><span>Services</span>23</div>
+                                       <div className="gitDetail"><span>Following</span>45</div>
+                                       <div className="gitDetail"><span>Followers</span>11</div>
+                                   </div>
+                                   <div className="gitDetail">{profile.category}</div>
+                                   <button className="likes" onClick={handleClick} key={profile.id}>Like ❤️</button>
+                                   <number className="updateLikes">{count}</number>
+                      
+                              
+                              </div>
+                           </div>
+                          
+                       )
+                   })
+               }
+
+                     
+
+           {/* </Slider> */}
+           </div>
           
         </section>
         
         </div>
   )
-  // function caroselCards(){
-  //   return (
-  //      <div className='carousel'>
-  //            {
-  //             Profiles.map(profile =>{
-  //               return (
-  //                 <div className='cards'>
-  //                    {profile.name} 
-  //                    {profile.description} 
-  //                    {profile.category} 
-
-
-  //                 </div>
-  //               )
-
-
-
-
-
-
-  //             })
-                
-  //            }
-    //    </div>
-    // );
-    
-    
-  // }
- 
-}
+              }
+  
 
 export default Services

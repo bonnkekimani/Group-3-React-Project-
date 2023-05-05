@@ -7,8 +7,10 @@ const ReviewCard = ({ review, rating, name }) => {
   }
   return (
     <div>
-        <div>{stars}</div>
-        <p>{review}</p>
+        <div>{stars}</div><br></br>
+        <br></br>
+        <p>{review}</p><br></br>
+        <br></br>
         <p>{name}</p>
     </div>
   );

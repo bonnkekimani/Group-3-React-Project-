@@ -1,53 +1,26 @@
 import React from "react"
 // import { GiPoliceBadge } from "react-icons/gi";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
-
-
-
-
 const Footer = () =>{
-
-    return  <footer className="footer">
+    return  (
+    <footer className="footer">
     <div className="foot-container">
-
- 
-    <div className="row">
-
-    
-
+    <div className="row"> 
     {/* <div class="col"> */}
-
       <div className="col">
-
         <h3>Contact Us</h3>
-
         <p>EASTLANDO</p>
-
         <p>Buruklyn,hapo rounda</p>
-
         <p>Email: Handlers@gmail.com</p>
-
         <p>Phone: +254 794471058</p>
-
         <h3>VIEW OUR HANDY WORK</h3>
-
         <ul class="social-icons">
           <p>Click to follow us!</p>
-
           <li><a href="https://www.facebook.com/NairobiHandymanServices/"><FaFacebook /></a></li>
-
-
           <li><a href="https://twitter.com/thehandyman_twt"><FaTwitter/></a></li>
-
-
           <li><a href="https://www.linkedin.com/company/handyman-services?original_referer=https%3A%2F%2Fwww.google.com%2F"><FaLinkedin/></a></li>
-
-
           <li><a href="https://www.instagram.com/handyman_repairskenya/"><FaInstagram/></a></li>
-
-
         </ul>
-
       </div>
 
       
@@ -135,8 +108,6 @@ const Footer = () =>{
         <p>MARGRET ADHIAMBOO
         </p>
 
-
-
         <p>© 2024 handymen the men </p>
 
       {/* </div> */}
@@ -147,7 +118,7 @@ const Footer = () =>{
     </div>
 </footer>
 
-
+    );
 
 }
 

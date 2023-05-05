@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { Link, Route, Routes } from "react-router-dom";
+import Home from "./Home";
 
 const SignUpform = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
+  // const handleLogin = () => {
+  //   setIsLoggedIn(true);
+  // };
 
   const handleLogout = () => {
     setIsLoggedIn(false);
@@ -30,16 +32,30 @@ const SignUpform = () => {
         ) : (
         <div className="login-font">
             <h1>Please Login</h1>
-            <button onClick={handleLogin}>Login</button>
+            {/* <button onClick={handleLogin}>Login</button> */}
+
+
+            <div>
+                      <Link to="/Home">
+                          <button id ='BtnService'>Login</button> 
+                      </Link>
+
+                         <Routes>
+                               <Route path="/Home" element={<Home />} />
+                         </Routes>
+            </div>
+
+
+
             <div class="media-options">
-            <a href="#" class="field facebook">
+            <a href="https://www.facebook.com/" target="_blank" class="field facebook">
                 <i class='bx bxl-facebook facebook-icon'></i>
                 <span>Login with Facebook</span>
             </a>
         </div>
             <div class="media-options">
-             <a href="#" class="field google">
-                 <span>Login with Google</span>
+             <a href="https://shorturl.at/iCFS1" target="_blank" class="field google">
+                 <span>Login with Gmail</span>
             </a>
         </div>
           </div>
